@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <Title>Curriculum Vitae</Title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js">
+        <style>
+            #Cuerpo {
+                text-align: center;
+                background: url("fondo.jpg") no-repeat center top;
+			    background-size: cover;
+                color:white;
+            }
+        </style>
+        <script>
+            function SessionCounter() {
+                if(typeof(Storage) !== "undefined") {
+                    if (sessionStorage.load) {
+                        sessionStorage.load = Number(sessionStorage.load)+1;
+                    } else {
+                        sessionStorage.load = 1;
+                    }
+                    document.getElementById("result").innerHTML = "Has visitado esta página " + sessionStorage.load + " veces en esta sesión.";
+                } else {
+                    document.getElementById("result").innerHTML = "Ups, Tu navegador no soporta <<SessionStorage>>...";
+                }
+            }
+        </script>
+    </head>
+
+    <body onload="SessionCounter()" id="Cuerpo">
+        <div class="container-fluid" id="B-Title">
+            <h1 class="display-1">Curriculum Vitae</h1>
+        </div>
+
+        <!--Primera Línea-->
+        <div class="row m-0" id="F-Line">
+            <div class="col">
+                <!--General-->
+                <h2><code>General:</code> <small>Datos <mark>generales</mark> <abbr title="User.">del usuario</abbr>.</small></h2>
+                <dt>Nombre</dt>
+                <input type="text" name="nombre" placeholder="Nombre">
+                <br><br>
+                <dt>Nacionalidad</dt>
+                <input type="text" name="nacionalidad" placeholder="Nacionalidad">
+                <br><br>
+                <dt>Fecha de Nacimiento</dt>
+                <input type="date" name="nacimiento" placeholder="Nacimiento">
+                <br><br>
+                <dt>Teléfono</dt>
+                <input type="tel" name="telefono" placeholder="Teléfono">
+                <br><br>
+                <dt>Celular</dt>
+                <input type="tel" name="celular" placeholder="Celular">
+                <br><br>
+                <dt>Correo</dt>
+                <input type="email" name="correo" placeholder="Correo">
+                <br><br>
+            </div>
+            <div class="col">
+                <!--Datos Académicos-->
+                <h2><kbd>Datos Académicos:</kbd> <small>Datos <mark>académicos</mark> <abbr title="User.">del usuario</abbr>.</small></h2>
+                <dt class="font-weight-bold">Carrera Universitaria</dt>
+                <input type="text" name="carrera" placeholder="Carrera">
+                <br><br>
+                <dt class="font-italic">Maestría</dt>
+                <input type="text" name="maestria" placeholder="Maestria">
+                <br><br>
+                <dt>Carrera Universitaria</dt>
+                <input type="text" name="carrera" placeholder="Carrera">
+                <br><br>
+            </div>
+            <div class="col">
+                <!--Actividades Extra-Curriculares-->
+                <h2>Actividades Extra-Curriculares: <small>Actividades <mark>extra-curriculares</mark> <abbr title="User.">del usuario</abbr>.</small></h2>
+                <dt>Pasatiempos</dt>
+                <input type="text" name="pasatiempos" placeholder="Pasatiempos">
+                <br><br>
+            
+                <!--Personales-->
+                <h2>Personales: <small>Datos <mark>personales</mark> <abbr title="User.">del usuario</abbr>.</small></h2>
+                <dt>Principales Competencias</dt>
+                <input type="text" name="competencias" placeholder="Competencias">
+                <br><br>
+                <dt>Habilidades Técnicas</dt>
+                <input type="text" name="tecnicas" placeholder="Técnicas">
+                <br><br>
+                <!--Experiencia Laboral-->
+                <h2>Experiencia Laboral: <small>Experiencia <mark>laboral</mark> <abbr title="User.">del usuario</abbr>.</small></h2>
+                <dt>Empresas</dt>
+                <input type="text" name="empresas" placeholder="Empresas">
+                <br><br>
+            </div>
+        </div>
+
+        <!--Segunda Línea-->
+        <div class="container" id="Refs">
+            <h2>Referencias: <small><abbr title="User-Friends.">Personas</abbr> de <mark>referencia</mark>.</small></h2>
+        </div>
+
+        <div class="row m-0">
+            <div class="col">
+                <h3>Persona 1</h3>
+                <dt>Nombre</dt>
+                <input type="text" name="p1Nombre" placeholder="Nombre">
+                <br><br>
+                <dt>Teléfono</dt>
+                <input type="tel" name="p1Telefono" placeholder="Télefono">
+                <br><br>
+                <dt>Correo</dt>
+                <input type="email" name="p1Correo" placeholder="Correo">
+                <br><br>
+            </div>
+            <div class="col">
+                <h3>Persona 2</h3>
+                <dt>Nombre</dt>
+                <input type="text" name="p2Nombre" placeholder="Nombre">
+                <br><br>
+                <dt>Teléfono</dt>
+                <input type="tel" name="p2Telefono" placeholder="Télefono">
+                <br><br>
+                <dt>Correo</dt>
+                <input type="email" name="p2Correo" placeholder="Correo">
+                <br><br>
+            </div>
+        </div>
+        <div id="Enviar">
+            <a href="cv_1.html" class="btn btn-primary">Ir</a>
+        </div>
+        <div id="result"></div>  
+        <div class="container-fluid">   
+            <footer class="blockquote-footer">Esta página ha sido desarrollada por CJ.</footer>
+        </div>  
+    </body>
+
+    
+</html>
